@@ -1,4 +1,4 @@
-# 👽🛸 EnvManager: The Intergalactic Configurator 🛸👽
+# 👽 EnvManager: The Intergalactic Configurator 👽
 
 Greetings, Earthling!  
 Welcome to **EnvManager**, your cosmic companion for managing planetary (and Pythonic) environments.  
@@ -27,7 +27,7 @@ Perfect for cleaning, processing, and organizing historical JSON data across the
 ---
 
 ## 🛠️ Installation
-Clone the repo and drop `CustomLogger.py` into your project like an alien artifact discovered in Area 51:  
+Clone the repo and drop `EnvManager.py` into your project like an alien artifact discovered in Area 51:  
 ```bash
 git clone https://github.com/yourusername/EnvManager.git
 ```
