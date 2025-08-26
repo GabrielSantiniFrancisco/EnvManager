@@ -2,7 +2,7 @@
 
 Greetings, Earthling!  
 Welcome to **EnvManager**, your cosmic companion for managing planetary (and Pythonic) environments.  
-Brought to you by [Gabriel Francisco](mailto:gabrielsantinifrancisco@outlook.com.com), this script is engineered for those who wish to boldly go where no configuration utility has gone before.
+Brought to you by [Gabriel Santini Francisco](mailto:gabrielsantinifrancisco@outlook.com), this script is engineered for those who wish to boldly go where no configuration utility has gone before.
 
 ---
 
@@ -29,7 +29,7 @@ Perfect for cleaning, processing, and organizing historical JSON data across the
 ## 🛠️ Installation
 Clone the repo and drop `EnvManager.py` into your project like an alien artifact discovered in Area 51:  
 ```bash
-git clone https://github.com/yourusername/EnvManager.git
+git clone https://github.com/GabrielSantiniFrancisco/EnvManager.git
 ```
 
 ---
@@ -88,7 +88,7 @@ ENABLE_WARP_DRIVE = True
 ## 🛸 Contact
 
 Questions? Transmission issues?  
-Contact [Gabriel Francisco](mailto:gabrielsantinifrancisco@outlook.com.com) via subspace comms (or email).
+Contact [Gabriel Francisco](mailto:gabrielsantinifrancisco@outlook.com) via subspace comms (or email).
 
 ---
 
