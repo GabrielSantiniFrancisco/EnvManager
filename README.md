@@ -1,98 +1,68 @@
-# 👽 EnvManager: The Intergalactic Configurator 👽
+# EnvManager
 
-Greetings, Earthling!  
-Welcome to **EnvManager**, your cosmic companion for managing planetary (and Pythonic) environments.  
-Brought to you by [Gabriel Santini Francisco](mailto:gabrielsantinifrancisco@outlook.com), this script is engineered for those who wish to boldly go where no configuration utility has gone before.
+A professional, flexible, and structured environment configuration utility for Python applications. This module provides a simple interface for loading configuration from Python files and setting environment variables dynamically. Designed for use in production-grade systems where clean configuration management and environment setup are essential.
 
----
+## Features
 
-## 🚀 Mission Briefing
+- **Configurable Environment**: Load configuration from a Python file and set environment variables and attributes automatically.
+- **Simple API**: Minimal, easy-to-use interface for integrating environment management into any Python project.
+- **Extensible**: Easily extend or customize for additional environment setup needs.
+- **No Hardcoded Paths**: Accepts any configuration file path, supporting flexible project structures.
 
-**EnvManager** is a utility class designed to:
+## Usage
 
-- Beam up configuration from Python files
-- Teleport environment variables into your system
-- Equip your codebase with flexible, extensible, and nerd-approved config management
+### 1. Installation
+Copy `EnvManager.py` into your project (e.g., in a `lib/` or `utils/` directory).
 
-Perfect for cleaning, processing, and organizing historical JSON data across the galaxy.
-
----
-
-## 🪐 Features
-
-- **Universal Config Loader:** Reads Python config files from any quadrant.
-- **Environment Variable Teleporter:** Instantly sets environment variables and class attributes.
-- **Plug-and-Play:** Drop it into your project and start warping through configs.
-
----
-
-## 🛠️ Installation
-Clone the repo and drop `EnvManager.py` into your project like an alien artifact discovered in Area 51:  
-```bash
-git clone https://github.com/GabrielSantiniFrancisco/EnvManager.git
+### 2. Example Configuration File (`config.py`)
+```python
+# config.py
+API_KEY = "your-api-key"
+DEBUG = True
+LOG_LEVEL = "INFO"
 ```
 
----
-
-## 👾 Usage
-
+### 3. Basic Usage
 ```python
 from EnvManager import EnvManager
 
-# Initiate the EnvManager with your config file path
-env = EnvManager('/path/to/your/config.py')
+env = EnvManager("config.py")
 
-# Now, your config variables are accessible as attributes!
-print(env.YOUR_CONFIG_VARIABLE)
+print(env.API_KEY)      
+print(env.DEBUG)
+print(env.LOG_LEVEL)
 ```
 
----
+### 4. Environment Variable Access
+After initialization, configuration values are also available as global variables:
+```python
+print(API_KEY)  
+```
 
-## 🛠️ API: Starfleet Documentation
+## API Reference
 
 ### `EnvManager(config_path: str)`
+- **config_path**: Path to the Python configuration file.
 
-- **Purpose:** Initializes the EnvManager, loads config, sets environment variables.
-- **Parameters:**  
-  - `config_path` (str): Path to your Python config file.
+#### Methods
+- `read_config(file_path: str) -> dict`  
+  Reads a Python config file and returns its variables as a dictionary.
 
-### `read_config(file_path: str) -> dict`
+- `set_env(config: dict) -> None`  
+  Sets environment variables and instance attributes based on the provided configuration dictionary.
 
-- **Purpose:** Reads a Python config file and returns its variables as a dictionary.
+## Advanced Details
+- **Dynamic Attribute Assignment**: All config keys become attributes of the `EnvManager` instance.
+- **Global Scope Option**: All config keys are also set as global variables for easy access throughout your codebase.
+- **No External Dependencies**: Pure Python, no third-party requirements.
 
-### `set_env(config: dict) -> None`
+## License
+MIT License
 
-- **Purpose:** Sets environment variables and instance attributes based on your config.
-
----
-
-## 🧬 Example Config File (`config.py`)
-
-```python
-# config.py
-GALACTIC_SECRET = "42"
-PLANET_NAME = "Earth"
-ENABLE_WARP_DRIVE = True
-```
+## Author
+Gabriel Santini Francisco  
+Email: gabrielsantinifrancisco@outlook.com
 
 ---
 
-## 🛰️ Why Use EnvManager?
-
-- **Alien-level Simplicity:** No more fumbling with `.env` files or cryptic config formats.
-- **Pythonic Telepathy:** Reads native Python files—no translation needed.
-- **Extensible:** Add your own cosmic features as you see fit.
-
----
-
-## 🛸 Contact
-
-Questions? Transmission issues?  
-Contact [Gabriel Francisco](mailto:gabrielsantinifrancisco@outlook.com) via subspace comms (or email).
-
----
-
-> _"May your configs always be clean, and your logs forever verbose."_  
-> — The EnvManager Collective
-
----
+*For questions, suggestions, or contributions, please open an issue or pull request
